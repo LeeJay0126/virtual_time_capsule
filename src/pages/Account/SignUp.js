@@ -14,7 +14,7 @@ const SignUp = () => {
     });
 
     //url is subjected to be changed after setting up the server
-    const url = "http://localhost:3500/users/signup";
+    const url = "http://localhost:3500/submitUser";
     const navigate = useNavigate();
 
     async function postNewUser(e){
