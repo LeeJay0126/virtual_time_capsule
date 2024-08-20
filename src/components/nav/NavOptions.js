@@ -1,6 +1,7 @@
 // Context needs to be replaced with Cookies or Tokens later.
 import { LoginContext } from "../context/LoginContext";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 const NavOptions = () => {
   const { isLoggedIn, setLoggedIn } = useContext(LoginContext);
@@ -26,7 +27,7 @@ const NavOptions = () => {
       <li className="menuBarItems" onClick={tempLoginHandler}>
         Sign In
       </li>
-      <li className="menuBarItems">Sign Up</li>
+      <li className="menuBarItems"><Link to="/signup">Sign Up</Link></li>
     </ul>
   );
 

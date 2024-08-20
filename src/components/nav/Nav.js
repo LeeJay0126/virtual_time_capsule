@@ -6,7 +6,7 @@ const Nav = () =>{
 
     return (
         <nav className="navContainer">
-            <Link to="/" className="Logo">V_TimeCapsule</Link>
+            <Link to="/" className="Logo">LaterGator</Link>
             <NavOptions/>
         </nav>
     );
