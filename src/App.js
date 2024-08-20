@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LoginContext } from "./components/context/LoginContext";
-import Home from "../src/pages/Home";
+import Home from "./pages/Home/Home";
 import { useState } from "react";
 
 function App() {
