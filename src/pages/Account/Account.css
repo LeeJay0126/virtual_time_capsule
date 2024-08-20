@@ -1,0 +1,76 @@
+/*
+    CSS Style Sheet for Account / Sign in
+*/
+
+/*
+    Account Page Nav
+*/
+
+.accountNav {
+    display: flex;
+    padding: 20px 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Logo {
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: black;
+    text-decoration: none;
+}
+
+.Logo:visited {
+    color: black;
+    text-decoration: none;
+}
+
+/*
+    Sign in / Sign up section
+*/
+
+.AccountMain {
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.AccountHeading {
+    font-weight: 500;
+    text-align: center;
+    font-size: 24px;
+    padding: 40px 0 10px 0;
+}
+
+.SecondaryAccountHeading {
+    font-weight: 400;
+    text-align: center;
+    font-size: 14px;
+    padding-bottom: 40px;
+}
+
+.AccountLink {
+    text-decoration: none;
+    color: rgb(24, 94, 24);
+}
+
+.AccountInputSection {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.LoginFields {
+    height: 50px;
+    font-size: 24px;
+    padding: 0 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.LoginButton {
+    height: 50px;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(46, 127, 46);
+    color: white;
+    cursor: pointer;
+}
