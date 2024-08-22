@@ -22,6 +22,7 @@ const SignUp = () => {
     e.preventDefault();
     //better validation required
     if (!(value.email == "" && value.email == "" && value.password == "")) {
+      console.log(value.name);
       await axios.post(url, {
         name: value.name,
         email: value.email,
