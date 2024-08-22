@@ -23,31 +23,31 @@ const SignIn = () => {
     };
 
     async function fetchLoginData() {
-        const username = value.username;
         const pw = value.password;
         setErrorMsg("");
 
         await axios.post(url, {
-            username: username
-        }.then(res => {
-            if (res.data.message == "Incorrect Username!") {
-                setErrorMsg(res.data.message);
+            email: value.email
+        }).then(res => {
+            console.log(res.data);
+            if (res.data == "Incorrect Username!") {
+                setErrorMsg(res.data);
             } else {
-                if (res.data.message == pw) {
+                if (res.data == pw) {
                     loginHandler();
                     navigate("/");
-                    setErrorMsg(res.data.message);
+                    setErrorMsg(res.data);
                 } else {
                     setErrorMsg("Wrong Password!");
                 }
             }
-        }).catch(err => { setErrorMsg(err.response.data) }));
+        }).catch(err => { setErrorMsg(err.response.data) });
     };
 
     const formSubmitHandler = (e) => {
         e.preventDefault();
         setErrorMsg("");
-        if(value.username != "" && value.password != ""){
+        if (value.username != "" && value.password != "") {
             fetchLoginData();
         } else {
             setErrorMsg("Do Not Leave The Username and Password Empty!");
@@ -65,12 +65,12 @@ const SignIn = () => {
                         Sign Up
                     </Link>
                 </h2>
-                <form className="AccountInputSection">
+                <section className="AccountInputSection">
                     <input type="text" placeholder="you@email.com" className="LoginFields" onChange={(e) => setValue({ ...value, email: e.target.value })} />
                     <input type="text" placeholder="Password" className="LoginFields" onChange={(e) => setValue({ ...value, password: e.target.value })} />
                     <button type="submit" className="LoginButton">LOGIN </button>
                     <p className="errorMessage">{errorMsg}</p>
-                </form>
+                </section>
             </form>
         </div>
     );
