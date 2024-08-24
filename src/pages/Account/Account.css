@@ -81,3 +81,24 @@
     letter-spacing: 1px;
     color: rgb(228, 92, 92);
 }
+
+@media only screen and (max-width: 768px) {
+    /*
+    Account Page Nav
+*/
+
+    .accountNav {
+        display: flex;
+        padding: 20px 20px;
+    }
+
+    /*
+    Sign in / Sign up section
+*/
+
+    .AccountMain {
+        margin: 0 auto;
+        max-width: 350px;
+    }
+
+}
