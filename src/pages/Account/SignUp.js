@@ -31,7 +31,7 @@ const SignUp = () => {
         console.log(res.data);
         if (res.data == "success") {
           setErrorMsg("Success!");
-          // navigate("/");
+          navigate("/");
         } else {
           setErrorMsg(res.data);
         }
