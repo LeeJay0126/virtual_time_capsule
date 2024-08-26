@@ -3,6 +3,7 @@ import { LoginContext } from "./components/context/LoginContext";
 import Home from "./pages/Home/Home";
 import { useState } from "react";
 import SignUp from "./pages/Account/SignUp";
+import SignIn from "./pages/Account/SignIn";
 
 function App() {
   const [isLoggedIn, setLoggedIn] = useState(false);
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/signin" element={<SignIn />} />
         </Routes>
       </BrowserRouter>
     </LoginContext.Provider>

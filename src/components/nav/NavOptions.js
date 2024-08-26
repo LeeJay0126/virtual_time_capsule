@@ -10,7 +10,7 @@ const NavOptions = () => {
   const tempLoginHandler = () => {
     setLoggedIn(!isLoggedIn);
   };
-  
+
   // List items are subjected to change in the future
   const loggedOutMenuOptions = (
     <ul className="menuBar loggedOutMenu">
@@ -24,8 +24,10 @@ const NavOptions = () => {
 
   const loggedInMenuOptions = (
     <ul className="menuBar loggedInMenu">
-      <li className="menuBarItems" onClick={tempLoginHandler}>
-        Sign In
+      <li className="menuBarItems">
+        <Link to="/signin">
+          Sign In
+        </Link>
       </li>
       <li className="menuBarItems"><Link to="/signup">Sign Up</Link></li>
     </ul>
