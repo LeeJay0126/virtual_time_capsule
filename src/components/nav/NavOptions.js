@@ -19,6 +19,7 @@ const NavOptions = () => {
       <li className="menuBarItems" onClick={tempLoginHandler}>
         Account
       </li>
+      <li className="menuBarItems"><Link to="/logout">Logout</Link></li> 
     </ul>
   );
 
