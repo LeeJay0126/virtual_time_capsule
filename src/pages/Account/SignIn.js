@@ -14,7 +14,7 @@ const SignIn = () => {
     });
     const [errorMsg, setErrorMsg] = useState("");
 
-    const url = "http://localhost:3500/login";
+    const url = "http://localhost:3500/signIn";
     const navigate = useNavigate();
 
     // This is where session / login cookie should come in to persist login status
@@ -41,7 +41,7 @@ const SignIn = () => {
                     setErrorMsg("Wrong Password!");
                 }
             }
-        }).catch(err => { setErrorMsg(err.response.data) });
+        }).catch(err => { setErrorMsg(`Wrong`) });
     };
 
     const formSubmitHandler = (e) => {
