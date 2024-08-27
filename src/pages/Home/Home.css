@@ -7,27 +7,43 @@
 */
 
 .homeHero {
-    background-image: url(../../components/images/homeHeroImg.jpg);
-    width: 100%;
-    height: 40vw;
-    background-size: cover;
-    background-position: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-items: center;
+  background-image: url(../../components/images/homeHeroImg.jpg);
+  width: 100%;
+  height: 40vw;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
 }
 
-.homeHeroHeading{
-    padding-bottom: 10px;
-    letter-spacing: 3px;
-    font-weight: 400;
+.homeHeroHeading {
+  padding-bottom: 10px;
+  letter-spacing: 3px;
+  font-weight: 400;
 }
 
 .secondaryHomeHeroHeading {
-    font-weight: 400;
-    font-size: 12px;
-    letter-spacing: 3px;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 3px;
 }
 
-
+@media only screen and (max-width: 768px) {
+    .homeHero {
+        height: 80vw;
+      }
+      
+      .homeHeroHeading {
+        padding-bottom: 5px;
+        letter-spacing: 1px;
+        font-weight: 400;
+      }
+      
+      .secondaryHomeHeroHeading {
+        font-weight: 400;
+        font-size: 10px;
+        letter-spacing: 1px;
+      }
+}

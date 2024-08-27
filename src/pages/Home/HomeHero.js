@@ -1,4 +1,3 @@
-import homeHeroImg from "../../components/images/homeHeroImg.jpg";
 
 const HomeHero = ()=> {
 
