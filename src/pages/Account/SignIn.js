@@ -28,20 +28,24 @@ const SignIn = () => {
 
         await axios.post(url, {
             email: value.email
+        }, {
+            headers: {
+                'Content-Type': 'application/json'
+            }
         }).then(res => {
-            console.log(res.data);
-            if (res.data == "Incorrect Username!") {
-                setErrorMsg(res.data);
+            console.log(res.data.success);
+            if (!res.data.success) {
+                setErrorMsg('Wrong ID/Password');
             } else {
-                if (res.data == pw) {
+                if (res.data.success) {
                     loginHandler();
                     navigate("/");
                     setErrorMsg(res.data);
-                } else {
-                    setErrorMsg("Wrong Password!");
                 }
             }
-        }).catch(err => { setErrorMsg(`Wrong`) });
+        }).catch(err => {
+            setErrorMsg("Wrong");
+        });
     };
 
     const formSubmitHandler = (e) => {

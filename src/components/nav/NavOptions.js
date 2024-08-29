@@ -18,6 +18,7 @@ const NavOptions = () => {
     await axios.post(url).then((res) => {
       tempLoginHandler();
       navigate("/");
+      console.log(res);
     });
   }
 
