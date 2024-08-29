@@ -24,8 +24,10 @@ const NavOptions = () => {
   // List items are subjected to change in the future
   const loggedOutMenuOptions = (
     <ul className="menuBar loggedOutMenu">
+      <li className="menuBarItems">
+        <Link to="/createCapsule">Create Capsules</Link>
+      </li>
       <li className="menuBarItems">Your Capsules</li>
-      <li className="menuBarItems">Create Capsules</li>
       <li className="menuBarItems" onClick={tempLoginHandler}>
         Account
       </li>
