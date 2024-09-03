@@ -40,6 +40,9 @@ const NavOptions = () => {
   const loggedInMenuOptions = (
     <ul className="menuBar loggedInMenu">
       <li className="menuBarItems">
+        <Link to="/createCapsule">Create Capsules</Link>
+      </li>
+      <li className="menuBarItems">
         <Link to="/signin">Sign In</Link>
       </li>
       <li className="menuBarItems">
